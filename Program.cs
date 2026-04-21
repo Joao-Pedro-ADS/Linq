@@ -1,9 +1,12 @@
-using LinqCrud;
+using LinqCrud.Data;
+using LinqCrud.Models;
+using LinqCrud.Repository;
+using LinqCrud.UI;
 
 var repo = new AlunoRepository();
 
 if (!repo.GetAll().Any())
-    Seed(repo);
+    Seed.Populate(repo);
 
 while (true)
 {
@@ -34,7 +37,7 @@ while (true)
     switch (option)
     {
         case "1":
-            PrintAlunos(repo.GetAll(), "Todos os alunos");
+            AlunoView.PrintAlunos(repo.GetAll(), "Todos os alunos");
             break;
 
         case "2":
@@ -43,14 +46,14 @@ while (true)
             {
                 var a = repo.GetById(id);
                 if (a is null) Console.WriteLine("Aluno não encontrado.");
-                else PrintAluno(a);
+                else AlunoView.PrintAluno(a);
             }
             break;
 
         case "3":
             Console.Write("Turma: ");
             var turma = Console.ReadLine() ?? "";
-            PrintAlunos(repo.GetByTurma(turma), $"Turma: {turma}");
+            AlunoView.PrintAlunos(repo.GetByTurma(turma), $"Turma: {turma}");
             break;
 
         case "4":
@@ -58,21 +61,21 @@ while (true)
             double.TryParse(Console.ReadLine(), out double min);
             Console.Write("Nota máxima: ");
             double.TryParse(Console.ReadLine(), out double max);
-            PrintAlunos(repo.GetByFaixaNota(min, max), $"Notas de {min:F1} a {max:F1}");
+            AlunoView.PrintAlunos(repo.GetByFaixaNota(min, max), $"Notas de {min:F1} a {max:F1}");
             break;
 
         case "5":
             Console.Write("Média mínima de aprovação (padrão 5,0): ");
             var inputAp = Console.ReadLine();
             double mediaAp = string.IsNullOrWhiteSpace(inputAp) ? 5.0 : double.Parse(inputAp);
-            PrintAlunos(repo.GetAprovados(mediaAp), $"Aprovados (nota ≥ {mediaAp:F1})");
+            AlunoView.PrintAlunos(repo.GetAprovados(mediaAp), $"Aprovados (nota ≥ {mediaAp:F1})");
             break;
 
         case "6":
             Console.Write("Média mínima de aprovação (padrão 5,0): ");
             var inputRep = Console.ReadLine();
             double mediaRep = string.IsNullOrWhiteSpace(inputRep) ? 5.0 : double.Parse(inputRep);
-            PrintAlunos(repo.GetReprovados(mediaRep), $"Reprovados (nota < {mediaRep:F1})");
+            AlunoView.PrintAlunos(repo.GetReprovados(mediaRep), $"Reprovados (nota < {mediaRep:F1})");
             break;
 
         case "7":
@@ -89,7 +92,7 @@ while (true)
         case "8":
             Console.Write("Buscar (nome ou matrícula): ");
             var termo = Console.ReadLine() ?? "";
-            PrintAlunos(repo.Search(termo), $"Resultados para \"{termo}\"");
+            AlunoView.PrintAlunos(repo.Search(termo), $"Resultados para \"{termo}\"");
             break;
 
         case "9":
@@ -154,46 +157,4 @@ while (true)
             Console.WriteLine("Opção inválida.");
             break;
     }
-}
-
-// ── Helpers ───────────────────────────────────────────────────────────────────
-
-static void PrintAlunos(IEnumerable<Aluno> alunos, string titulo)
-{
-    var lista = alunos.ToList();
-    Console.WriteLine($"\n── {titulo} ({lista.Count} aluno(s)) ──");
-    if (!lista.Any()) { Console.WriteLine("  (nenhum resultado)"); return; }
-
-    Console.WriteLine($"  {"ID",-4} {"Nome",-25} {"Matrícula",-12} {"Turma",-8} {"Nota",6}");
-    Console.WriteLine("  " + new string('─', 60));
-    foreach (var a in lista)
-        Console.WriteLine($"  {a.Id,-4} {a.Nome,-25} {a.Matricula,-12} {a.Turma,-8} {a.Nota,6:F1}");
-}
-
-static void PrintAluno(Aluno a)
-{
-    Console.WriteLine($"\n  ID            : {a.Id}");
-    Console.WriteLine($"  Nome          : {a.Nome}");
-    Console.WriteLine($"  Matrícula     : {a.Matricula}");
-    Console.WriteLine($"  Turma         : {a.Turma}");
-    Console.WriteLine($"  Data de nasc. : {a.DataNascimento:dd/MM/yyyy}");
-    Console.WriteLine($"  Nota          : {a.Nota:F1}");
-}
-
-static void Seed(AlunoRepository repo)
-{
-    var alunos = new[]
-    {
-        new Aluno { Nome = "Ana Lima",        Matricula = "2024001", Turma = "3A", DataNascimento = new DateOnly(2007, 3, 15), Nota = 8.5 },
-        new Aluno { Nome = "Bruno Souza",     Matricula = "2024002", Turma = "3A", DataNascimento = new DateOnly(2007, 7, 22), Nota = 4.0 },
-        new Aluno { Nome = "Carla Mendes",    Matricula = "2024003", Turma = "2B", DataNascimento = new DateOnly(2008, 1, 10), Nota = 7.2 },
-        new Aluno { Nome = "Diego Ferreira",  Matricula = "2024004", Turma = "2B", DataNascimento = new DateOnly(2008, 9, 5),  Nota = 3.8 },
-        new Aluno { Nome = "Elisa Rocha",     Matricula = "2024005", Turma = "1C", DataNascimento = new DateOnly(2009, 5, 30), Nota = 9.1 },
-        new Aluno { Nome = "Felipe Costa",    Matricula = "2024006", Turma = "1C", DataNascimento = new DateOnly(2009, 11, 18),Nota = 5.5 },
-        new Aluno { Nome = "Gabriela Nunes",  Matricula = "2024007", Turma = "3A", DataNascimento = new DateOnly(2007, 2, 28), Nota = 6.8 },
-        new Aluno { Nome = "Henrique Alves",  Matricula = "2024008", Turma = "2B", DataNascimento = new DateOnly(2008, 6, 14), Nota = 2.5 },
-    };
-
-    foreach (var a in alunos) repo.Add(a);
-    Console.WriteLine("Base de dados criada com alunos de exemplo.\n");
 }

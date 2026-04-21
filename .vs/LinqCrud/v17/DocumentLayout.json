@@ -1,0 +1,120 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\LINQ\\Linq\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B21FC597-48C6-B556-EB96-28D7DC74ECF0}|LinqCrud.csproj|c:\\linq\\linq\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B21FC597-48C6-B556-EB96-28D7DC74ECF0}|LinqCrud.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B21FC597-48C6-B556-EB96-28D7DC74ECF0}|LinqCrud.csproj|c:\\linq\\linq\\data\\seed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B21FC597-48C6-B556-EB96-28D7DC74ECF0}|LinqCrud.csproj|solutionrelative:data\\seed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B21FC597-48C6-B556-EB96-28D7DC74ECF0}|LinqCrud.csproj|c:\\linq\\linq\\repository\\alunorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B21FC597-48C6-B556-EB96-28D7DC74ECF0}|LinqCrud.csproj|solutionrelative:repository\\alunorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B21FC597-48C6-B556-EB96-28D7DC74ECF0}|LinqCrud.csproj|c:\\linq\\linq\\alunos.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B21FC597-48C6-B556-EB96-28D7DC74ECF0}|LinqCrud.csproj|solutionrelative:alunos.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 403,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Seed.cs",
+              "DocumentMoniker": "C:\\LINQ\\Linq\\Data\\Seed.cs",
+              "RelativeDocumentMoniker": "Data\\Seed.cs",
+              "ToolTip": "C:\\LINQ\\Linq\\Data\\Seed.cs",
+              "RelativeToolTip": "Data\\Seed.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T22:28:00.447Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AlunoRepository.cs",
+              "DocumentMoniker": "C:\\LINQ\\Linq\\Repository\\AlunoRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\AlunoRepository.cs",
+              "ToolTip": "C:\\LINQ\\Linq\\Repository\\AlunoRepository.cs",
+              "RelativeToolTip": "Repository\\AlunoRepository.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T22:27:37.633Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "alunos.json",
+              "DocumentMoniker": "C:\\LINQ\\Linq\\alunos.json",
+              "RelativeDocumentMoniker": "alunos.json",
+              "ToolTip": "C:\\LINQ\\Linq\\alunos.json",
+              "RelativeToolTip": "alunos.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-21T22:27:34.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\LINQ\\Linq\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\LINQ\\Linq\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T22:27:31.75Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedHeight": 249,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 168,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a7673ab8-96c2-4f8f-86b9-ef4527b5383a}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
