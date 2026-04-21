@@ -1,7 +1,8 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using LinqCrud.Models;
 
-namespace LinqCrud;
+namespace LinqCrud.Repository;
 
 public class AlunoRepository
 {
