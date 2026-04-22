@@ -1,4 +1,4 @@
-namespace LinqCrud.Models;
+namespace Linq.Models;
 
 public class Aluno
 {

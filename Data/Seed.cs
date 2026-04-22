@@ -1,7 +1,7 @@
-using LinqCrud.Models;
-using LinqCrud.Repository;
+using Linq.Models;
+using Linq.Repository;
 
-namespace LinqCrud.Data;
+namespace Linq.Data;
 
 public static class Seed
 {

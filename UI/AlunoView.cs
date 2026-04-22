@@ -1,6 +1,6 @@
-using LinqCrud.Models;
+using Linq.Models;
 
-namespace LinqCrud.UI;
+namespace Linq.UI;
 
 public static class AlunoView
 {

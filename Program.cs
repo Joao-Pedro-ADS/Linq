@@ -1,7 +1,7 @@
-using LinqCrud.Data;
-using LinqCrud.Models;
-using LinqCrud.Repository;
-using LinqCrud.UI;
+using Linq.Data;
+using Linq.Models;
+using Linq.Repository;
+using Linq.UI;
 
 var repo = new AlunoRepository();
 
